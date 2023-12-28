@@ -13,7 +13,7 @@ pipeline
         stage('build')
         {
             steps{
-            build 'maven_job'
+            build 'https://github.com/pulkitpan/maven.git'
             }
         }
         stage('Test')
