@@ -1,0 +1,19 @@
+node{
+    
+    stage('Fetch')
+    {
+        git branch: 'main', url: 'https://github.com/pulkitpan/maven.git'
+    }
+    stage('Build')
+    {
+        build 'maven_job'
+    }
+    stage('Test')
+    {
+        echo "Testing..Phase"
+    }
+    stage('Deploy')
+    {
+        echo "Deploying..Phase"
+    }
+}
